@@ -55,3 +55,8 @@ variable "project-name" {
     default = "XPTO-TOOL"
   
 }
+
+variable "iam-profile" {
+    type = string
+    default = "ansible-awx-tech-hack-role"
+}

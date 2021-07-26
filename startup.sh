@@ -2,5 +2,5 @@
 yum update -y
 yum install epel-release
 yum update -y
-yum install htop net-tools ansible -y
-#amazon-linux-extras install ansible2
+yum install htop net-tools git -y
+amazon-linux-extras install ansible2 -y

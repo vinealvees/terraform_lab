@@ -11,6 +11,7 @@ resource "aws_instance" "xpto-instance" {
     vpc_security_group_ids = data.aws_security_groups.sg-default.ids
     user_data = "${file("startup.sh")}"
     key_name = "${var.key-name}"
+    iam_instance_profile = "${var.iam-profile}"
     root_block_device {
       encrypted = "${var.ebs-crypto}"
       volume_type = "${var.volume-type}"
