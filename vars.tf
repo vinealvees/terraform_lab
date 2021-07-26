@@ -28,7 +28,7 @@ variable "instance-nbr" {
 
 variable "key-name" {
     type = string
-    default = "vinicius-pc.pem"
+    default = "vinicius-pc"
   
 }
 
