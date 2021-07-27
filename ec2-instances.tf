@@ -5,11 +5,12 @@ data "aws_ami" "ami-default" {
 }
 
 resource "aws_instance" "xpto-instance" {
-    ami = data.aws_ami.ami-default.id
+    #ami = data.aws_ami.ami-default.id
+    ami = "ami-00399ec92321828f5"
     instance_type = "${var.instance-type}"
     count = "${var.instance-nbr}"
     vpc_security_group_ids = data.aws_security_groups.sg-default.ids
-    user_data = "${file("startup.sh")}"
+    user_data = "${file("startup-ubuntu.sh")}"
     key_name = "${var.key-name}"
     iam_instance_profile = "${var.iam-profile}"
     root_block_device {
