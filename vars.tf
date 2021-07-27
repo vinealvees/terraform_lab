@@ -22,7 +22,7 @@ variable "instance-type" {
 
 variable "instance-nbr" {
     type = string
-    default = "1"
+    default = "2"
       
 }
 
